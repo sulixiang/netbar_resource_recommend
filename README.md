@@ -21,7 +21,7 @@
     └── result.html ---结果渲染页  
 ```
 
-## 用法
+## 开启服务
 ```
 sh start_server.sh
 ```
