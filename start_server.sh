@@ -1,2 +1,2 @@
-python app.py >/dev/null 2>&1 &
-python build_app.py > /dev/null 2>&1 &
+python app.py >logs/app.log 2>&1 &
+python build_app.py > logs/build_app.log 2>&1 &
