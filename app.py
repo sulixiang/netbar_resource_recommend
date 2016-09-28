@@ -1,5 +1,5 @@
 #coding:utf-8
-from flask import Blueprint
+from flask import Blueprint, Flask, request, render_template, redirect, url_for
 main = Blueprint('main', __name__)
  
 import os, json
@@ -10,7 +10,10 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
  
-from flask import Flask, request, render_template
+
+@main.route("/", methods=["GET"])
+def index():
+    return redirect(url_for('static',filename='index.html'))
  
 @main.route("/vec/<resource>", methods=["GET"])
 def resource_vec(resource):
