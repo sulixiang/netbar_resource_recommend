@@ -28,11 +28,11 @@ sh start_server.sh
 
 ## 接口说明
 
-> - http://[app]/ : demo portal页  
-> - http://[app]/vec/<resources> : 查询<resource>的特征 ex:http://[app]/vec/英雄联盟  
-> - http://[app]/ranking : POST:positive、negative、rawdata，对rawdata排序  
-> - http://[app]/top/<n> : 获取topn推荐，ex:http://[app]/top/10  
-> - http://[app]/flush/engine : 重新加载推荐模型  
-> - http://[build_app]/resource/add : 增加用户行为路径数据，更新推荐模型  
-> - http://[build_app]/build/model : 从数据集文件创建模型  
+- http://[app]/ : demo portal页  
+- http://[app]/vec/<resources> : 查询<resource>的特征 ex:http://[app]/vec/英雄联盟  
+- http://[app]/ranking : POST:positive、negative、rawdata，对rawdata排序  
+- http://[app]/top/<n> : 获取topn推荐，ex:http://[app]/top/10  
+- http://[app]/flush/engine : 重新加载推荐模型  
+- http://[build_app]/resource/add : 增加用户行为路径数据，更新推荐模型  
+- http://[build_app]/build/model : 从数据集文件创建模型  
  
