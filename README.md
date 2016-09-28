@@ -1,4 +1,5 @@
 # netbar_resource_recommend
+网吧平台资源(游戏、软件)推荐系统
 
 ## 文件结构
 ```
