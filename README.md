@@ -18,7 +18,7 @@
 ├── templates  
 │   └── result.html ---结果渲染页  
 ├── logs  
-├── README.md  
+└── README.md  
 ```
 
 ## 开启服务
