@@ -1,0 +1,48 @@
+<html>
+	<head>
+	<title>Matrix 更新位推荐引擎demo</title>
+	</head>
+	<body>
+		<h1>模型创建</h1>
+
+		<form method="get" action="http://10.0.1.138:1195/build/model" target="frame22">
+			<table>
+				<tr>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td  align='left'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>从数据集文件创建模型</b></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align='right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="创建模型"></td>
+				</tr>
+			</table>	
+		</form>
+		<br/>
+		<br/>
+		<form method="post" action="http://10.0.1.138:1195/resource/add" target="frame22">
+			<table>
+				<tr>
+					<td></td>
+					<td  align='left'><b>增加用户行为路径，更新推荐模型，所有字段不能为空</b></td>
+				</tr>
+				<tr>
+					<td>用户行为路径:</td>
+					<td><textarea class="textarea input-largest" name="sentences" rows="8" style="width:500px">
+守望先锋,英雄联盟,英雄联盟,英雄联盟,英雄联盟,英雄联盟,英雄联盟,英雄联盟,守望先锋
+百度浏览器,极品飞车14,怪物猎人Online
+穿越火线,腾讯QQ,穿越火线,穿越火线
+腾讯QQ,英雄联盟,腾讯QQ,QQ音乐
+英雄联盟,地下城与勇士,地下城与勇士,英雄联盟官方助手(TGP),QQ炫舞
+						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align='right'><input type="submit" value="慎点，完整数据更新一次大约2分钟，当前是测试数据，更新"></td>
+				</tr>
+			</table>	
+		</form>
+		<br/>
+		<br/>
+	</body>
+</html>

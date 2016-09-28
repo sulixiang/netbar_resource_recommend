@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div><pre id="json"></pre></div>
+<script type="text/javascript">
+var json = JSON.stringify(JSON.parse('{{ result|safe }}'), null, 4);
+document.getElementById("json").innerHTML=json;
+</script>
+</body>
+
+</html>

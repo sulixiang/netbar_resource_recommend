@@ -1,0 +1,70 @@
+
+<html>
+	<head>
+	<title>Matrix 更新位推荐引擎demo</title>
+	</head>
+	<body>
+		<h1>模型应用</h1>
+
+		<form method="post" action="/ranking" target="frame12">
+			<table>
+				<tr>
+					<td></td>
+					<td  align='left'><b>根据用户感兴趣和不感兴趣数据对广告列表排序，所有字段不能为空</b></td>
+				</tr>
+				<tr>
+					<td>感兴趣:</td>
+					<td><input type='text' name="positive" value='英雄联盟,守望先锋' style="height:30px;width:500px"></input></td>
+				</tr>
+				<tr>
+					<td>不感兴趣:</td>
+					<td><input type='text' name="negative" value='征途2' style="height:30px;width:500px"></input></td>
+				</tr>
+				<tr>
+					<td>广告列表:</td>
+					<td><input type='text' name="rawdata" value='隋唐演义OL,绿人小镇,战天堂,炉石传说' style="height:30px;width:500px"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align='right'><input type="submit" value="排 序"></td>
+				</tr>
+			</table>	
+		</form>
+		<br/>
+		<br/>
+		<form method="post" action="/top/20" target="frame12">
+			<table>
+				<tr>
+					<td></td>
+					<td  align='left'><b>根据用户感兴趣和不感兴趣数据，推荐Top20资源，所有字段不能为空</b></td>
+				</tr>
+				<tr>
+					<td>感兴趣:</td>
+					<td><input type='text' name="positive" value='英雄联盟,守望先锋' style="height:30px;width:500px"></input></td>
+				</tr>
+				<tr>
+					<td>不感兴趣:</td>
+					<td><input type='text' name="negative" value='征途2' style="height:30px;width:500px"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align='right'><input type="submit" value="推 荐"></td>
+				</tr>
+			</table>	
+		</form>
+		<br/>
+		<br/>
+		<form method="get" action="/flush/engine" target="frame12">
+			<table>
+				<tr>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td  align='left'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>重新加载模型</b></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align='right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="重新加载"></td>
+				</tr>
+			</table>	
+		</form>
+	</body>
+</html>
