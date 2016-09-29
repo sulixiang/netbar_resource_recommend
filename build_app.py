@@ -31,23 +31,23 @@ def add_sentences():
 @main.route("/build/model",methods = ["GET"])
 def build_model():
     t0 = time()
-    dataset_path = os.path.join('datasets')
-    recommendation_engine.build_model(dataset_path)
+    recommendation_engine.build_model()
     tt = time()-t0
     result = json.dumps("build model sucess in %s seconds" % round(tt,3))
     return render_template('result.html', result=result)
 
  
  
-def create_app():
+def create_app(dataset_path):
     global recommendation_engine 
 
-    recommendation_engine = RecommendationEngine()
+    recommendation_engine = RecommendationEngine(dataset_path)
 
     app = Flask(__name__)
     app.register_blueprint(main)
     return app 
 
 if __name__ == "__main__":
-    app = create_app()
+    dataset_path = os.path.join('datasets')
+    app = create_app(dataset_path)
     app.run(host="0.0.0.0", port=1195, debug=True)

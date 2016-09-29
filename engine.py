@@ -31,13 +31,11 @@ class RecommendationEngine:
         self.model.save_word2vec_format(os.path.join('model','wordVector.txt'),binary=False)
         logger.info("word2vec model built!")
     
-    def build_model(self, dataset_path):
+    def build_model(self):
         """Add additional sentences
         """
         # Load data for later use
         logger.info("Loading corpus data...")
-        self.dataset_path = dataset_path
-        self.sentences = []
         with open(os.path.join(self.dataset_path,'export_gamerun_series.csv'),'rt') as f:
                 reader = csv.reader(f)
                 for row in reader:
@@ -98,10 +96,13 @@ class RecommendationEngine:
         result = [(index2word[sim],float(dists[sim])) for sim in best if index2word[sim] in rawdata]
         return result
 
-    def __init__(self):
+    def __init__(self,dataset_path):
         """Init the recommendation engine given a dataset path
         """
         logger.info("Starting up the Recommendation Engine: ")
+
+        self.dataset_path = dataset_path
+        self.sentences = []
 
         # Init the model
         #self.num_features = 1000 # 最多多少个不同的features，即限制语料库里有多少个独立的词，用于控制内存占用

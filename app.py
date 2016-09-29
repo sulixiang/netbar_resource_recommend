@@ -49,15 +49,16 @@ def reload_model():
     result=json.dumps('reload model sucess')
     return render_template('result.html', result=result)
  
-def create_app():
+def create_app(dataset_path):
     global recommendation_engine 
 
-    recommendation_engine = RecommendationEngine()    
+    recommendation_engine = RecommendationEngine(dataset_path)    
     
     app = Flask(__name__)
     app.register_blueprint(main)
     return app 
 
 if __name__ == "__main__":
-    app = create_app()
+    dataset_path = os.path.join('datasets')
+    app = create_app(dataset_path)
     app.run(host="0.0.0.0", port=1194, debug=True)
